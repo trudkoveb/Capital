@@ -1,0 +1,425 @@
+@font-face {
+    font-family: DinLight;
+    src: url(../../fonts/pfdintextpro-light.ttf);
+}
+
+$body-bg: #f0eff0;
+$white: #fff;
+$main-font: 'PT Sans', sans-serif;
+$center: center;
+$bold: bold;
+$color: #424243;
+$color-bd-table: #00b297;
+$no-border: none;
+$red: #d4524b;
+$mb-zero: 0;
+$sprite: url("../../img/spritesheet.png");
+
+
+html{
+  box-sizing: border-box;
+    body{
+      background-color: $body-bg;
+      font-family: $main-font;
+        .scrollup{
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          display: none;
+        }
+        .main{
+          margin-top: 70px;
+        }
+        h2{
+          font-size: 36px;
+          color: $color;
+          font-family: $main-font;
+          padding: 50px 0;
+          margin-bottom: $mb-zero;
+        }
+        figcaption{
+          font-weight: bold;
+          font-size: 18px;
+          color: #404041;
+        }
+        .principle{
+          text-align: $center;
+            .row{
+              background-color: $white;
+            }
+            .principle__list{
+              p{
+                font-weight: $bold;
+                color: $color;
+                margin-bottom: $mb-zero;
+                text-align: left;
+                span{
+                  font-weight: normal
+                }
+              }
+              p:first-child{
+                margin-top: 50px;
+              }
+              figure{
+                margin: 0;
+              }
+
+              > div{
+                margin-bottom: 35px;
+                position: relative;
+              }
+
+              > div > div:last-child:after{
+                content: "";
+                display: block;
+                background-image: $sprite;
+                position: absolute;
+                right: 0;
+              }
+
+              > div:first-child > div:last-child:after{
+                width: 76px;
+                height: 67px;
+                background-position: -64px -5px;
+                top: 60px;
+              }
+
+              > div:nth-child(2) > div:last-child:after{
+                width: 54px;
+                height: 21px;
+                background-position: -5px -82px;
+                top: 60px;
+                right: 15px;
+              }
+
+              > div:nth-child(3) > div:last-child:after{
+                width: 55px;
+                height: 20px;
+                background-position: -69px -82px;
+                top: 75px;
+                right: 15px;
+              }
+
+              > div:last-child > div:last-child:after{
+                width: 78px;
+                height: 70px;
+                background-position: -150px -5px;
+                top: 10px;
+              }
+            }
+            .principle__calc{
+              img + p{
+                font-weight: $bold;
+                font-size: 24px;
+                color: $color;
+                padding: 42px 0 24px 0;
+                margin: 0;
+              }
+              table{
+                width: 100%;
+                border: 4px solid $color-bd-table;
+                text-align: left;
+                thead{
+                  color: $white;
+                  font-style: italic;
+                  font-size: 16px;
+                  border: $no-border;
+                    tr{
+                      background-color: $color-bd-table;
+                    }
+                    th{
+                        display: table-cell;
+                      }
+                }
+                tbody{
+                  border: $no-border;
+                  td{
+                    display: table-cell;
+                  }
+                  td:first-child{
+                    background-color: #dfe1e5;
+                  }
+                }
+                tr{
+                  background-color: $white;
+                  border-bottom: 1px solid $color-bd-table;
+                }
+                tr:first-child td:nth-child(2){
+                  background-color: $red;
+                }
+                tr:last-child{
+                  border-bottom: $no-border;
+                }
+                tr:last-child td:nth-child(3){
+                  background-color: #f1c40f;
+                }
+              }
+            }
+            .principle__result{
+                position: relative;
+                margin: 210px 0;
+                display: inline-block;
+                .principle__result-sell, .principle__result-buy{
+                  position: absolute;
+                  padding: 10px 17px;
+                  text-align: $center;
+                }
+                .principle__result-sell{
+                  background-color: $red;
+                  top: 65px;
+                  left: 25px;
+                }
+                .principle__result-buy{
+                  background-color: $color-bd-table;
+                  top: 65px;
+                  right: 30px;
+                }
+                p{
+                  margin-bottom: $mb-zero;
+                  color: $white;
+                  font-size: 24px;
+                  line-height: 27px;
+                }
+                p:last-child{
+                  font-weight: $bold;
+                  text-transform: uppercase;
+                }
+            }
+            .principle__result:after{
+              content: "";
+              display: block;
+              width: 49px;
+              height: 34px;
+              background-position: -5px -5px;
+              background-image: $sprite;
+              position: absolute;
+              top: 90px;
+              left: -57px;
+            }
+        }
+        .list{
+          padding-bottom: 75px;
+          ul{
+            list-style: none;
+            margin-bottom: $mb-zero;
+            padding-left: 35px;
+            li{
+              font-family: DinLight;
+              color: $color;
+              font-size: 16px;
+              position: relative;
+              padding-bottom: 30px;
+            }
+            li:after{
+              content: "";
+              display: block;
+              background-image: $sprite;
+              position: absolute;
+              top: 8px;
+              left: -30px;
+            }
+            li:first-child:after{
+              width: 18px;
+              height: 32px;
+              background-position: -167px -85px;
+            }
+            li:nth-child(2):after{
+              width: 19px;
+              height: 32px;
+              background-position: -223px -85px;
+            }
+            li:nth-child(3):after{
+              width: 18px;
+              height: 32px;
+              background-position: -195px -85px;
+            }
+            li:last-child:after{
+              width: 23px;
+              height: 32px;
+              background-position: -134px -85px;
+            }
+          }
+          p{
+            margin-bottom: $mb-zero;
+            font-size: 22px;
+            font-family: $main-font;
+          }
+        }
+    }
+}
+
+@media (max-width: 640px){
+  html{
+    body{
+        .main{
+          margin-top: 40px;
+          .container{
+            width: 100%;
+          }
+        }
+        .principle{
+            .principle__list{
+              > div > div:last-child:after{
+                display: none;
+              }
+              p{
+                text-align: $center;
+              }
+            }
+            .principle__result{
+              margin: 20px 0;
+              .principle__result-sell, .principle__result-buy{
+                padding: 5px 15px;
+                top: 40px;
+                p{
+                  font-size: 19px;
+                }
+              }
+              .principle__result-sell{
+                  left: 50px;
+                }
+              .principle__result-buy{
+                  right: 50px;
+              }
+            }
+            .principle__result:after{
+              display: none;
+            }
+            .principle__calc{
+            table{
+              thead{
+                th{
+                  display: block;
+                }
+              }
+              tbody{
+                td{
+                  display: block;
+                }
+              }
+            }
+          }
+          }
+        }
+      }
+    }
+
+@media (min-width: 641px) and (max-width: 1022px){
+  html{
+    body{
+        .main{
+          margin-top: 40px;
+          .container{
+            width: 100%;
+          }
+        }
+        .principle{
+            .principle__list{
+              > div > div:last-child:after{
+                display: none;
+              }
+              p{
+                text-align: $center;
+              }
+            }
+            .principle__result{
+              margin: 20px 0;
+              .principle__result-sell, .principle__result-buy{
+                padding: 5px 15px;
+                top: 40px;
+                p{
+                  font-size: 19px;
+                }
+              }
+              .principle__result-sell{
+                  left: 50px;
+                }
+              .principle__result-buy{
+                  right: 50px;
+              }
+            }
+            .principle__result:after{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+@media (min-width: 1023px) and (max-width: 1185px){
+  html{
+    body{
+        .main{
+          margin-top: 40px;
+          .container{
+            width: 100%;
+          }
+        }
+        .principle{
+          .principle__list{
+              > div > div:last-child:after{
+                right: -25px;
+              }
+              > div:nth-child(2) > div:last-child:after, > div:nth-child(3) > div:last-child:after{
+                right: 0;
+              }
+            }
+            .principle__result{
+              margin: 240px 0;
+              img{
+                width: 80%;
+              }
+              .principle__result-sell, .principle__result-buy{
+                padding: 5px 15px;
+                top: 40px;
+                p{
+                  font-size: 19px;
+                }
+              }
+              .principle__result-sell{
+                  left: 50px;
+                }
+              .principle__result-buy{
+                  right: 50px;
+              }
+            }
+              .principle__result:after{
+                top: 60px;
+                left: -28px;
+            }
+          }
+        }
+      }
+    }
+
+@media (max-width: 315px){
+  html{
+    body{
+      h2{
+        font-size: 20px;
+      }
+        .principle{
+            .principle__result{
+              img{
+                display: none;
+              }
+              .principle__result-sell, .principle__result-buy{
+                position: static;
+                display: block;
+              }
+              .principle__result-sell{
+                margin-bottom: 10px;
+              }
+            }
+          }
+          .list{
+            ul{
+              padding-left: 0;
+            }
+            p{
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
